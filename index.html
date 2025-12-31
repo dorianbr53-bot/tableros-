@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conquista de la Chakana — Casillas con Canvas (7x7)</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Conquista de la Chakana — Tablero 7×7</h1>
+    <div class="controls">
+      <label for="patternSelect">Patrón:</label>
+      <select id="patternSelect" title="Selecciona el patrón 7×7">
+        <option value="1">1_7x7.jpg</option>
+        <option value="2">2_7x7.jpg</option>
+        <option value="3">3_7x7.jpg</option>
+        <option value="4">4_7x7.jpg</option>
+      </select>
+      <button id="resetBtn" class="btn">Reiniciar</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="board-panel">
+      <canvas id="board" width="800" height="800" aria-label="Tablero de juego 7x7"></canvas>
+    </section>
+    <aside class="sidebar">
+      <div class="players">
+        <div class="player-badge" id="p1Badge">
+          <span class="color-dot" style="background:#1e88e5"></span>
+          <span>Jugador 1</span>
+        </div>
+        <div class="player-badge" id="p2Badge">
+          <span class="color-dot" style="background:#e53935"></span>
+          <span>Jugador 2</span>
+        </div>
+      </div>
+
+      <div class="scores">
+        <div><strong>Puntos Jugador 1:</strong> <span id="p1Score">0</span></div>
+        <div><strong>Puntos Jugador 2:</strong> <span id="p2Score">0</span></div>
+      </div>
+
+      <div class="turn-indicator">Turno: <span id="turnLabel">Jugador 1</span></div>
+
+      <div class="legend">
+        <h3>Leyenda de Puntuación</h3>
+        <ul>
+          <li><span class="swatch" style="background:rgb(235,244,228)"></span> Verde = 1 punto</li>
+          <li><span class="swatch" style="background:rgb(255,230,153)"></span> Amarillo = 2 puntos</li>
+          <li><span class="swatch" style="background:rgb(191,143,0)"></span> Marrón = 4 puntos</li>
+        </ul>
+      </div>
+
+      <p class="hint">Haz clic cerca de una arista para dibujar tu línea. Si cierras una casilla, se dibujará un sol del color del jugador y sumarás puntos según el color de la casilla.</p>
+    </aside>
+  </main>
+
+  <footer class="app-footer">
+    <small>Coloca los archivos de patrón 7×7 en <code>assets/img/patterns/</code> usando los nombres: <code>1_7x7.jpg</code>, <code>2_7x7.jpg</code>, <code>3_7x7.jpg</code>, <code>4_7x7.jpg</code>.</small>
+  </footer>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
