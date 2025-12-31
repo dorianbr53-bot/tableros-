@@ -1,0 +1,86 @@
+
+/* =============================================================
+   Conquista de la Chakana — Estilos
+   ============================================================= */
+:root {
+  --bg: #0f172a; /* slate-900 */
+  --panel: #111827; /* gray-900 */
+  --text: #e5e7eb; /* gray-200 */
+  --muted: #9ca3af; /* gray-400 */
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 20% 0%, #0b1023, #0f172a 60%, #0a0f21 100%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.app-header h1 { font-size: 1.25rem; margin: 0; }
+.controls { display: flex; gap: .75rem; align-items: center; }
+select, .btn {
+  background: #1f2937;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+}
+.btn { cursor: pointer; }
+.btn:hover { background: #243243; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1rem;
+  padding: 1rem;
+}
+.board-panel {
+  background: rgba(0,0,0,0.25);
+  border-radius: .75rem;
+  padding: .75rem;
+}
+#board {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .5rem;
+  background: #0a0f1f;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04), 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.sidebar {
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: .75rem;
+  padding: 1rem;
+}
+.players { display: flex; flex-direction: column; gap: .5rem; }
+.player-badge {
+  display: flex; align-items: center; gap: .5rem;
+  padding: .5rem .75rem; border-radius: .5rem;
+  background: rgba(255,255,255,0.03);
+}
+.color-dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+.scores { margin-top: .75rem; display: grid; gap: .25rem; }
+.turn-indicator { margin-top: .75rem; font-weight: 600; }
+.legend { margin-top: 1rem; }
+.legend h3 { margin: 0 0 .5rem 0; font-size: 1rem; }
+.legend ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .25rem; }
+.swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; margin-right: .5rem; vertical-align: middle; box-shadow: 0 0 0 1px rgba(0,0,0,0.4); }
+.hint { color: var(--muted); font-size: .9rem; margin-top: 1rem; }
+
+.app-footer {
+  padding: .75rem 1rem; color: var(--muted); border-top: 1px solid rgba(255,255,255,0.06);
+}
+``
